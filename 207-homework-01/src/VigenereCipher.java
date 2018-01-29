@@ -71,15 +71,19 @@ public class VigenereCipher {
 			if (response.compareTo("encode") == 0) {
 				System.out.print("Enter the string to encode: ");
 				String plaintext = in.nextLine();
+				
 				System.out.print("Enter the key: ");
 				String key1 = in.nextLine();
+				
 				String encoded = new String(encode (key1, plaintext));
 				System.out.println(encoded);
 			} else if (response.compareTo("decode") == 0) {
 				System.out.print("Enter the string to decode: ");
 				String ciphertext = in.nextLine();
+				
 				System.out.print("Enter the key: ");
 				String key2 = in.nextLine();
+				
 				String decoded = new String(decode (key2, ciphertext));
 				System.out.println(decoded);
 			} else {

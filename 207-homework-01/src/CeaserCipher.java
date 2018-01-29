@@ -69,6 +69,7 @@ public class CeaserCipher {
 			if (response.compareTo("encode") == 0) {
 				System.out.print("Enter the string to encode: ");
 				String plaintext = in.nextLine();
+				
 				for (int i = 0; i < 26; i++) {
 					String encoded = new String(encode (i, plaintext));
 					System.out.printf("n = %d: %s\n", i, encoded);
@@ -76,6 +77,7 @@ public class CeaserCipher {
 			} else if (response.compareTo("decode") == 0) {
 				System.out.print("Enter the string to decode: ");
 				String ciphertext = in.nextLine();
+				
 				for (int i = 0; i < 26; i++) {
 					String decoded = new String(decode (i, ciphertext));
 					System.out.printf("n = %d: %s\n", i, decoded);
@@ -99,6 +101,7 @@ public class CeaserCipher {
 		/* Program description */
 		System.out.println("This program encrypts and decrypts messages using the Caeser Cipher");
 		System.out.print("Would you like to encode or decode a message? ");
+		
 		inputOperator();
 	}
 }
