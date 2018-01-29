@@ -22,7 +22,7 @@ public class VigenereCipher {
 			int val = (int) (encoded[i] - 2 * base + keyArray[i % keyArray.length]);
 			encoded[i] = (char) (val % 26 + base);
 		}
-		
+
 		return new String(encoded);
 	}
 
@@ -50,7 +50,7 @@ public class VigenereCipher {
 				decoded[i] = (char) (val + 26 + base);
 			}
 		}
-		
+
 		return new String(decoded);
 	}
 
@@ -64,8 +64,10 @@ public class VigenereCipher {
 	public static int inputOperator () {
 		Scanner in = new Scanner(System.in);
 		String response = in.nextLine();
-		
+
 		try {
+			/* User input can be "encode", "decode"
+			 *  or anything else that would terminate the program */
 			if (response.compareTo("encode") == 0) {
 				System.out.print("Enter the string to encode: ");
 				String plaintext = in.nextLine();
@@ -86,7 +88,7 @@ public class VigenereCipher {
 		} finally {
 			in.close();
 		}
-		
+
 		return 0;
 	}
 
